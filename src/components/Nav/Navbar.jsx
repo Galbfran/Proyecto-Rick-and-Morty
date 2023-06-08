@@ -6,6 +6,7 @@ export default function NavBar({onSearch, random}) {
       <div >
         <Link to='/about'>About</Link>
         <Link to='/home'>Home</Link>
+        <Link to='/favorites'>Favorites</Link>
         <SearchBar onSearch={onSearch} />
         <button className="random" onClick={random}>
           ADD RANDOM

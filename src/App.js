@@ -3,6 +3,7 @@ import "./App.css";
 import Cards from "./components/Cards/Cards";
 import NavBar from "./components/Nav/Navbar";
 import Form from "./components/Form/Form";
+
 //Rutas
 import About from "./components/About/About";
 import Detail from "./components/Detail/Detail";
@@ -11,12 +12,14 @@ import Detail from "./components/Detail/Detail";
 import axios from "axios";
 import {useState , useEffect} from "react";
 import { Route , Routes , useLocation , useNavigate} from "react-router-dom";
+import Favorites from "./components/Favoritos/Favorites";
 
 function App() {
   const [characters, setCharacters] = useState([]);
   const location = useLocation();
   const [access , setAccess] = useState(false);
   const navigate = useNavigate()
+  
   const username = 'francogalbiati@gmail.com'
   const password = '123asdf'
 
@@ -78,6 +81,7 @@ function App() {
       <Routes>
         <Route path="/home" element={<Cards characters={characters} onClose={closeHandler}/> }/>
         <Route path="/about" element={<About/>} />
+        <Route path="/favorites" element={<Favorites/>}/>
         <Route path="/detail/:detailId" element={<Detail/>}/>
       </Routes>
       

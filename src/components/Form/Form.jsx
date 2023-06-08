@@ -33,11 +33,11 @@ const Form = ({login}) =>{
     return(
         <form onSubmit={handleSubmit}>
             <label htmlFor="username">Username</label>
-            <input type="text" name="username" value={userData.username} onChange={handelInputChange}/>
+            <input type="text" name="username" value={userData.username} onChange={handelInputChange} placeholder="francogalbiati@gmail.com"/>
             {errors.username && <p style={{color:'red'}}>{errors.username}</p>}
 
             <label htmlFor="password">Password</label>
-            <input type="password" name="password" value={userData.password} onChange={handelInputChange}/>
+            <input type="password" name="password" value={userData.password} onChange={handelInputChange} placeholder="123asdf"/>
             {errors.password && <p style={{color:'red'}}>{errors.password}</p>}
             <button>Login</button>
         </form>
